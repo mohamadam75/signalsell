@@ -1,0 +1,20 @@
+name = "listing-radar"
+main = "src/index.js"
+compatibility_date = "2026-10-21"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+[[kv_namespaces]]
+binding = "RADAR_KV"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[triggers]
+crons = ["*/15 * * * *"]
+
+[vars]
+MIN_LIQUIDITY_USD = "25000"
+MIN_VOLUME_24H_USD = "10000"
+MAX_PROFILE_SCAN = "25"
